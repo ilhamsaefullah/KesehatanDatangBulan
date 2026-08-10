@@ -14,7 +14,9 @@ body {
 .container {
   width: 100%;
   height: 100vh;
+
   display: flex;
+
   overflow: hidden;
 }
 
@@ -23,17 +25,23 @@ body {
 .left-section {
   width: 65%;
   height: 100%;
+
   background-color: #ffa7aa;
+
   color: #fff3dc;
+
   position: relative;
+
   padding: 35px;
+
   overflow: hidden;
 }
 
-/* Bentuk miring bagian kanan */
+/* BENTUK MIRING */
 
 .left-section::after {
   content: "";
+
   position: absolute;
 
   top: 0;
@@ -51,8 +59,11 @@ body {
 
 .logo {
   font-size: 14px;
+
   font-weight: bold;
+
   position: relative;
+
   z-index: 2;
 }
 
@@ -60,16 +71,21 @@ body {
 
 .content {
   position: relative;
+
   z-index: 2;
 
   margin-top: 30px;
+
   margin-left: -10px;
 }
 
 .content h1 {
   font-size: 58px;
+
   line-height: 0.95;
+
   font-weight: bold;
+
   letter-spacing: -2px;
 }
 
@@ -77,10 +93,13 @@ body {
 
 .buttons {
   margin-top: 30px;
+
   margin-left: 105px;
 
   display: flex;
+
   flex-direction: column;
+
   gap: 15px;
 
   width: 100px;
@@ -88,11 +107,13 @@ body {
 
 .buttons button {
   border: none;
+
   background-color: white;
 
   color: #ff9da1;
 
   font-size: 11px;
+
   font-weight: bold;
 
   padding: 6px 10px;
@@ -106,6 +127,7 @@ body {
 
 .buttons button:hover {
   background-color: #ffe5e5;
+
   transform: scale(1.05);
 }
 
@@ -127,12 +149,13 @@ body {
   height: 100%;
 
   object-fit: cover;
+
   object-position: center;
 
   display: block;
 }
 
-/* LOGIN MODAL */
+/* POPUP LOGIN */
 
 .login-modal {
   position: fixed;
@@ -148,6 +171,7 @@ body {
   display: none;
 
   justify-content: center;
+
   align-items: center;
 
   z-index: 10;
@@ -173,11 +197,13 @@ body {
 
 .login-box h2 {
   color: #c34f75;
+
   margin-bottom: 8px;
 }
 
 .login-box p {
   color: #777;
+
   margin-bottom: 25px;
 }
 
@@ -249,11 +275,13 @@ body {
 
   .left-section {
     width: 100%;
+
     height: 60%;
   }
 
   .right-section {
     width: 100%;
+
     height: 40%;
   }
 
