@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* BAGIAN KIRI */
+
+.left-section {
+  width: 65%;
+  height: 100%;
+  background-color: #ffa7aa;
+  color: #fff3dc;
+  position: relative;
+  padding: 35px;
+  overflow: hidden;
+}
+
+/* Bentuk miring bagian kanan */
+
+.left-section::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: -120px;
+
+  width: 230px;
+  height: 100%;
+
+  background-color: #c34f75;
+
+  transform: skewX(-20deg);
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+/* CONTENT */
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 30px;
+  margin-left: -10px;
+}
+
+.content h1 {
+  font-size: 58px;
+  line-height: 0.95;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+/* BUTTON */
+
+.buttons {
+  margin-top: 30px;
+  margin-left: 105px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  width: 100px;
+}
+
+.buttons button {
+  border: none;
+  background-color: white;
+
+  color: #ff9da1;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #ffe5e5;
+  transform: scale(1.05);
+}
+
+/* BAGIAN KANAN */
+
+.right-section {
+  width: 35%;
+  height: 100%;
+
+  background-color: #c34f75;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.right-section img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+/* LOGIN MODAL */
+
+.login-modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.45);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+}
+
+/* LOGIN BOX */
+
+.login-box {
+  width: 350px;
+
+  background-color: white;
+
+  padding: 35px;
+
+  border-radius: 15px;
+
+  position: relative;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+  color: #c34f75;
+  margin-bottom: 8px;
+}
+
+.login-box p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* INPUT */
+
+.login-box input {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.login-box input:focus {
+  border-color: #c34f75;
+}
+
+/* LOGIN BUTTON */
+
+.login-box button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background-color: #c34f75;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* CLOSE */
+
+.close {
+  position: absolute;
+
+  top: 10px;
+  right: 18px;
+
+  font-size: 28px;
+
+  color: #888;
+
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #c34f75;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    width: 100%;
+    height: 60%;
+  }
+
+  .right-section {
+    width: 100%;
+    height: 40%;
+  }
+
+  .content h1 {
+    font-size: 42px;
+  }
+
+  .buttons {
+    margin-left: 50px;
+  }
+
+  .left-section::after {
+    display: none;
+  }
+}
