@@ -1,34 +1,53 @@
-// Mengambil elemen dari HTML
+// Mengambil tombol LOGIN
 const loginBtn = document.getElementById("loginBtn");
+
+// Mengambil tombol SIGN IN
 const signupBtn = document.getElementById("signupBtn");
 
+// Mengambil popup login
 const loginModal = document.getElementById("loginModal");
+
+// Mengambil tombol close
 const closeLogin = document.getElementById("closeLogin");
 
+// Mengambil form login
 const loginForm = document.getElementById("loginForm");
 
-// Tombol LOGIN NOW
+// ======================================
+// TOMBOL LOGIN NOW
+// ======================================
+
 loginBtn.addEventListener("click", function () {
   loginModal.style.display = "flex";
 });
 
-// Tombol close
+// ======================================
+// TOMBOL CLOSE
+// ======================================
+
 closeLogin.addEventListener("click", function () {
   loginModal.style.display = "none";
 });
 
-// Klik di luar kotak login
+// ======================================
+// KLIK DI LUAR KOTAK LOGIN
+// ======================================
+
 loginModal.addEventListener("click", function (event) {
   if (event.target === loginModal) {
     loginModal.style.display = "none";
   }
 });
 
-// Proses login
+// ======================================
+// PROSES LOGIN
+// ======================================
+
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const email = document.getElementById("email").value;
+
   const password = document.getElementById("password").value;
 
   if (email === "" || password === "") {
