@@ -96,7 +96,7 @@ body {
 .buttons {
   margin-top: 50px;
 
-  margin-left: 160px;
+  margin-left: 86px;
 
   display: flex;
 
@@ -104,7 +104,7 @@ body {
 
   gap: 20px;
 
-  width: 100px;
+  width: 350px;
 }
 
 .buttons button {
@@ -114,7 +114,7 @@ body {
 
   color: #ff9da1;
 
-  font-size: 11px;
+  font-size: 16px;
 
   font-weight: bold;
 
