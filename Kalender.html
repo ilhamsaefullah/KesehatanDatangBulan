@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kalender Menstruasi</title>
+
+    <link rel="stylesheet" href="Kalender.css" />
+  </head>
+
+  <body>
+    <div class="kalender-container">
+      <!-- BACKGROUND FOTO -->
+      <div class="background-foto"></div>
+
+      <!-- KONTEN DI ATAS FOTO -->
+      <div class="kalender-section">
+        <h1>Kalender Menstruasi</h1>
+
+        <div class="kalender-box">
+          <div class="bulan">
+            <button onclick="bulanSebelumnya()">‹</button>
+
+            <span id="namaBulan">Agustus</span>
+
+            <button onclick="bulanBerikutnya()">›</button>
+          </div>
+
+          <div class="hari">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+
+            <div>13</div>
+            <div>14</div>
+            <div class="mens">15</div>
+            <div class="mens">16</div>
+            <div class="mens">17</div>
+            <div class="mens">18</div>
+
+            <div class="mens">19</div>
+            <div class="mens">20</div>
+            <div class="mens">21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+
+            <div>25</div>
+            <div>26</div>
+            <div>27</div>
+            <div>28</div>
+            <div>29</div>
+            <div>30</div>
+
+            <div>31</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <!-- LOGO -->
+        <img
+          src="C:\Users\ilham\Documents\GitHub\KesehatanDatangBulan\Logo.png"
+          class="logo"
+          alt="Menstrual Care"
+        />
+      </div>
+
+      <!-- BAGIAN INFORMASI -->
+      <div class="info-section">
+        <h2>INFORMASI</h2>
+
+        <div class="legend">
+          <div>
+            <span class="warna menstruasi"></span>
+            <b>MENSTRUASI</b>
+          </div>
+
+          <div>
+            <span class="warna prediksi"></span>
+            <b>PREDIKSI</b>
+          </div>
+
+          <div>
+            <span class="warna subur"></span>
+            <b>MASA SUBUR</b>
+          </div>
+
+          <div>
+            <span class="warna hari-ini"></span>
+            <b>HARI INI</b>
+          </div>
+        </div>
+
+        <!-- DATA -->
+        <div class="data-box">
+          <label>Menstruasi Terakhir</label>
+
+          <div class="data-input">
+            <input type="text" id="mensTerakhir" readonly />
+          </div>
+
+          <label>Prediksi Berikutnya</label>
+
+          <div class="data-input">
+            <input type="text" id="prediksi" readonly />
+          </div>
+
+          <label>Panjang Siklus</label>
+
+          <div class="data-input">
+            <input type="text" id="panjangSiklus" readonly />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="Kalender.js"></script>
+  </body>
+</html>
