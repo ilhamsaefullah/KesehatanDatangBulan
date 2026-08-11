@@ -81,7 +81,7 @@ body {
 .slogan h1 {
   color: #fff1d6;
 
-  font-size: 38px;
+  font-size: 70px;
 
   line-height: 0.95;
 
@@ -176,32 +176,24 @@ body {
 
 /* MENSTRUAL */
 
-.menstrual {
-  font-size: 32px;
+.logo {
+  position: absolute;
 
-  font-weight: 900;
+  bottom: 15px;
+  left: 50%;
 
-  font-style: italic;
+  transform: translateX(-50%);
 
-  letter-spacing: -2px;
+  width: 180px;
 
-  transform: rotate(-5deg);
+  text-align: center;
 }
 
-/* CARE */
+.logo img {
+  width: 100%;
+  height: auto;
 
-.care {
-  font-size: 28px;
-
-  font-weight: bold;
-
-  font-style: italic;
-
-  color: #ffd0c7;
-
-  margin-top: -8px;
-
-  transform: rotate(-5deg);
+  display: block;
 }
 
 /* ================================= */
