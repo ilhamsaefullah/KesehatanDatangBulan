@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Prediksi Menstruasi</title>
+
+    <link rel="stylesheet" href="Prediksi.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ================= BAGIAN KIRI ================= -->
+
+      <section class="left-section">
+        <button class="back-btn" onclick="kembali()">Back</button>
+
+        <h2>PREDIKSI MENSTRUASI</h2>
+
+        <div class="input-group">
+          <label> Tanggal terakhir Menstruasi </label>
+
+          <div class="date-input">
+            <input
+              type="number"
+              id="tanggal"
+              placeholder="17"
+              min="1"
+              max="31"
+            />
+
+            <input type="number" id="bulan" placeholder="08" min="1" max="12" />
+
+            <input
+              type="number"
+              id="tahun"
+              placeholder="2026"
+              min="1900"
+              max="2100"
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label> Rata Rata Panjang Siklus </label>
+
+          <input
+            type="number"
+            id="siklus"
+            class="siklus-input"
+            value="28"
+            min="1"
+          />
+        </div>
+
+        <button class="hitung-btn" onclick="hitungPrediksi()">
+          HITUNG PREDIKSI
+        </button>
+
+        <!-- LOGO -->
+
+        <div class="logo">
+          <img src="logo-menstrual-care.png" alt="Menstrual Care" />
+        </div>
+      </section>
+
+      <!-- ================= BAGIAN TENGAH ================= -->
+
+      <section class="middle-section">
+        <div class="hasil">
+          <h3>
+            MENSTRUASI BERIKUTNYA<br />
+            DIPERKIRAKAN
+          </h3>
+
+          <p id="hasilTanggal">-</p>
+
+          <p class="kemungkinan">
+            ± kemungkinan 5–7 hari<br />
+            perkiraan menstruasi<br />
+            berikutnya
+          </p>
+        </div>
+
+        <div class="quote">
+          Know<br />
+          Your Body<br />
+          Cycle
+        </div>
+      </section>
+
+      <!-- ================= BAGIAN KANAN ================= -->
+
+      <section class="right-section">
+        <img src="perempuan-prediksi.png" alt="Prediksi Menstruasi" />
+      </section>
+    </div>
+
+    <script src="Prediksi.js"></script>
+  </body>
+</html>
