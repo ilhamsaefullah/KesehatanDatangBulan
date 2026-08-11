@@ -58,3 +58,49 @@ loginForm.addEventListener("submit", function (event) {
 
   alert("Login berhasil!");
 });
+
+// ======================================
+// SIGN IN
+// ======================================
+
+const signupModal = document.getElementById("signupModal");
+
+const closeSignup = document.getElementById("closeSignup");
+
+const signupForm = document.getElementById("signupForm");
+
+// Tombol SIGN IN NOW
+signupBtn.addEventListener("click", function () {
+  signupModal.style.display = "flex";
+});
+
+// Tombol close SIGN IN
+closeSignup.addEventListener("click", function () {
+  signupModal.style.display = "none";
+});
+
+// Klik di luar kotak SIGN IN
+signupModal.addEventListener("click", function (event) {
+  if (event.target === signupModal) {
+    signupModal.style.display = "none";
+  }
+});
+
+// Proses SIGN IN
+signupForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const email = document.getElementById("signupEmail").value;
+
+  const password = document.getElementById("signupPassword").value;
+
+  // Simpan email dan password
+  localStorage.setItem("email", email);
+
+  localStorage.setItem("password", password);
+
+  alert("Akun berhasil dibuat!");
+
+  // Tutup popup
+  signupModal.style.display = "none";
+});
