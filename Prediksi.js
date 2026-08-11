@@ -1,46 +1,57 @@
+// =====================================
+// HITUNG PREDIKSI MENSTRUASI
+// =====================================
+
 function hitungPrediksi() {
-  const tanggal = parseInt(document.getElementById("tanggal").value);
+  // Ambil riwayat dari localStorage
+  const riwayat = JSON.parse(localStorage.getItem("riwayatMenstruasi")) || [];
 
-  const bulan = parseInt(document.getElementById("bulan").value);
-
-  const tahun = parseInt(document.getElementById("tahun").value);
-
-  const siklus = parseInt(document.getElementById("siklus").value);
-
-  // Cek input
-
-  if (isNaN(tanggal) || isNaN(bulan) || isNaN(tahun) || isNaN(siklus)) {
-    alert("Silakan isi semua data terlebih dahulu!");
+  // Minimal membutuhkan 2 riwayat
+  if (riwayat.length < 2) {
+    alert(
+      "Data belum cukup untuk menghitung panjang siklus.\n\n" +
+        "Minimal diperlukan 2 catatan menstruasi.",
+    );
 
     return;
   }
 
-  // Validasi tanggal
+  // Ambil 2 data menstruasi terakhir
+  const menstruasiSekarang = riwayat[riwayat.length - 1];
 
-  if (
-    tanggal < 1 ||
-    tanggal > 31 ||
-    bulan < 1 ||
-    bulan > 12 ||
-    tahun < 1900 ||
-    siklus < 1
-  ) {
-    alert("Data yang dimasukkan tidak valid!");
+  const menstruasiSebelumnya = riwayat[riwayat.length - 2];
+
+  // Ambil tanggal mulai
+  const tanggalSekarang = new Date(menstruasiSekarang.mulai);
+
+  const tanggalSebelumnya = new Date(menstruasiSebelumnya.mulai);
+
+  // =====================================
+  // HITUNG PANJANG SIKLUS
+  // =====================================
+
+  const selisih = tanggalSekarang - tanggalSebelumnya;
+
+  const panjangSiklus = Math.round(selisih / (1000 * 60 * 60 * 24));
+
+  // Validasi siklus
+  if (panjangSiklus <= 0) {
+    alert("Data tanggal menstruasi tidak valid.");
 
     return;
   }
 
-  // Membuat tanggal menstruasi terakhir
+  // =====================================
+  // HITUNG PREDIKSI BERIKUTNYA
+  // =====================================
 
-  const tanggalTerakhir = new Date(tahun, bulan - 1, tanggal);
+  const tanggalPrediksi = new Date(tanggalSekarang);
 
-  // Menghitung tanggal berikutnya
+  tanggalPrediksi.setDate(tanggalPrediksi.getDate() + panjangSiklus);
 
-  const tanggalPrediksi = new Date(tanggalTerakhir);
-
-  tanggalPrediksi.setDate(tanggalPrediksi.getDate() + siklus);
-
-  // Format tanggal
+  // =====================================
+  // FORMAT TANGGAL
+  // =====================================
 
   const namaBulan = [
     "JANUARI",
@@ -65,9 +76,21 @@ function hitungPrediksi() {
 
   const hasil = `${hasilHari} ${hasilBulan} ${hasilTahun}`;
 
-  // Tampilkan hasil
+  // =====================================
+  // TAMPILKAN HASIL
+  // =====================================
 
   document.getElementById("hasilTanggal").textContent = hasil;
+
+  // =====================================
+  // TAMPILKAN PANJANG SIKLUS
+  // =====================================
+
+  const inputSiklus = document.getElementById("siklus");
+
+  if (inputSiklus) {
+    inputSiklus.value = panjangSiklus;
+  }
 }
 
 // =====================================
