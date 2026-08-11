@@ -58,9 +58,12 @@ body {
 
   color: #ff4fa3;
 
-  font-size: 25px;
+  font-size: 35px;
 
   margin-bottom: 10px;
+
+  position: relative;
+  left: 170px;
 }
 
 /* ==============================
@@ -68,9 +71,11 @@ body {
 ============================== */
 
 .kalender-box {
-  width: 400px;
-
-  margin: 0 auto;
+  width: 450px;
+  height: 700px;
+  position: absolute;
+  left: 420px;
+  top: 80px;
 }
 
 .background-foto {
@@ -93,8 +98,8 @@ body {
 /* BULAN */
 
 .bulan {
-  width: 253px;
-  height: 40px;
+  width: 450px;
+  height: 60px;
 
   border: 1px solid #e76b80;
 
@@ -108,7 +113,7 @@ body {
 }
 
 .bulan span {
-  font-size: 24px;
+  font-size: 35px;
 
   font-weight: bold;
 
@@ -141,7 +146,7 @@ body {
 }
 
 .hari div {
-  height: 32px;
+  height: 50px;
 
   border: 1px solid #e76b80;
 
@@ -155,16 +160,36 @@ body {
 
   color: #bd4b70;
 
-  font-size: 20px;
+  font-size: 40px;
 }
 
 /* MENSTRUASI */
 
-.hari .mens {
-  background-color: #ff5db2;
-
+/* MENSTRUASI */
+.hari .menstruasi {
+  background-color: #ff4b5c;
   color: white;
+  font-weight: bold;
+}
 
+/* PREDIKSI */
+.hari .prediksi {
+  background-color: #f7c948;
+  color: white;
+  font-weight: bold;
+}
+
+/* MASA SUBUR */
+.hari .subur {
+  background-color: #6dbb6d;
+  color: white;
+  font-weight: bold;
+}
+
+/* HARI INI */
+.hari .hari-ini {
+  background-color: #4169e1;
+  color: white;
   font-weight: bold;
 }
 
@@ -175,11 +200,11 @@ body {
 .logo {
   position: absolute;
 
-  width: 190px;
+  width: 390px;
 
-  bottom: 30px;
+  bottom: 10px;
 
-  left: 50%;
+  left: 68%;
 
   transform: translateX(-50%);
 
