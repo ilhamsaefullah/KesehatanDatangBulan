@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #ffa6aa;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+}
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.kalender-container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+}
+
+/* ==============================
+   FOTO BACKGROUND
+============================== */
+
+.kalender-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==============================
+   KALENDER
+============================== */
+
+.kalender-section {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 70%;
+  height: 100%;
+
+  z-index: 1;
+
+  padding-top: 25px;
+}
+.kalender-section h1 {
+  text-align: center;
+
+  color: #ff4fa3;
+
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+/* ==============================
+   BOX KALENDER
+============================== */
+
+.kalender-box {
+  width: 400px;
+
+  margin: 0 auto;
+}
+
+.background-foto {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("BackgroundKalender.jpg");
+  background-size: 80%;
+  background-position: -5% center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+/* BULAN */
+
+.bulan {
+  width: 253px;
+  height: 40px;
+
+  border: 1px solid #e76b80;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background-color: #ffd0d0;
+}
+
+.bulan span {
+  font-size: 24px;
+
+  font-weight: bold;
+
+  color: #bd4b70;
+}
+
+.bulan button {
+  width: 35px;
+  height: 35px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #bd4b70;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+/* ==============================
+   TANGGAL
+============================== */
+
+.hari {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.hari div {
+  height: 32px;
+
+  border: 1px solid #e76b80;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: #ffdede;
+
+  color: #bd4b70;
+
+  font-size: 20px;
+}
+
+/* MENSTRUASI */
+
+.hari .mens {
+  background-color: #ff5db2;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+/* ==============================
+   LOGO
+============================== */
+
+.logo {
+  position: absolute;
+
+  width: 190px;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+}
+
+/* ==============================
+   INFORMASI
+============================== */
+
+.info-section {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 30%;
+  height: 100%;
+
+  background-color: #bd4b70;
+
+  z-index: 2;
+}
+
+.info-section h2 {
+  text-align: center;
+
+  font-size: 24px;
+
+  padding: 22px 0 12px;
+}
+
+/* ==============================
+   LEGEND
+============================== */
+
+.legend {
+  padding: 0 20px;
+}
+
+.legend div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 12px;
+
+  font-size: 18px;
+}
+
+.warna {
+  width: 30px;
+  height: 30px;
+
+  display: inline-block;
+}
+
+.menstruasi {
+  background-color: #ff5db2;
+}
+
+.prediksi {
+  background-color: #f7b51b;
+}
+
+.subur {
+  background-color: #a7c957;
+}
+
+.hari-ini {
+  background-color: #3e45d8;
+}
+
+/* ==============================
+   DATA BOX
+============================== */
+
+.data-box {
+  margin-top: 15px;
+
+  background-color: #ff5db2;
+
+  padding: 15px 12px;
+
+  text-align: center;
+}
+
+.data-box label {
+  display: block;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  margin-bottom: 4px;
+}
+
+.data-input {
+  margin-bottom: 8px;
+}
+
+.data-input input {
+  width: 100%;
+
+  height: 34px;
+
+  border: 1px solid #e76b80;
+
+  background-color: #ffd0d0;
+
+  text-align: center;
+
+  color: #bd4b70;
+
+  font-weight: bold;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .kalender-container {
+    height: auto;
+
+    flex-direction: column;
+  }
+
+  .foto-section,
+  .kalender-section,
+  .info-section {
+    width: 100%;
+  }
+
+  .foto-section {
+    height: 400px;
+  }
+
+  .kalender-section {
+    height: 500px;
+  }
+
+  .info-section {
+    height: auto;
+
+    min-height: 400px;
+  }
+}
