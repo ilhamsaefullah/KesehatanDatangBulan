@@ -47,16 +47,28 @@ loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const email = document.getElementById("email").value;
-
   const password = document.getElementById("password").value;
 
-  if (email === "" || password === "") {
-    alert("Email dan password harus diisi!");
+  // Mengambil akun yang sudah disimpan saat SIGN IN
+  const savedEmail = localStorage.getItem("email");
+  const savedPassword = localStorage.getItem("password");
+
+  // Mengecek apakah akun sudah terdaftar
+  if (savedEmail === null || savedPassword === null) {
+    alert("Akun belum terdaftar. Silakan Sign In terlebih dahulu.");
 
     return;
   }
 
-  alert("Login berhasil!");
+  // Mengecek email dan password
+  if (email === savedEmail && password === savedPassword) {
+    alert("Login berhasil!");
+
+    // Masuk ke halaman Beranda
+    window.location.href = "Beranda.html";
+  } else {
+    alert("Email atau password salah!");
+  }
 });
 
 // ======================================
