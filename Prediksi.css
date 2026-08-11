@@ -43,8 +43,7 @@ body {
 }
 
 .left-section h2 {
-  font-size: 18px;
-
+  font-size: 25px;
   margin-bottom: 20px;
 }
 
@@ -91,7 +90,7 @@ body {
 .input-group label {
   display: block;
 
-  font-size: 13px;
+  font-size: 20px;
 
   font-weight: bold;
 
@@ -121,7 +120,7 @@ body {
 
   text-align: center;
 
-  font-size: 12px;
+  font-size: 15px;
 
   font-weight: bold;
 
@@ -149,7 +148,7 @@ body {
 
   text-align: center;
 
-  font-size: 12px;
+  font-size: 15px;
 
   font-weight: bold;
 
@@ -161,7 +160,7 @@ body {
 ===================================== */
 
 .hitung-btn {
-  width: 108px;
+  width: 115px;
 
   height: 23px;
 
@@ -199,7 +198,7 @@ body {
 }
 
 .logo img {
-  width: 150px;
+  width: 400px;
 
   height: auto;
 }
@@ -223,45 +222,32 @@ body {
 ===================================== */
 
 .hasil {
-  width: 220px;
-
-  min-height: 186px;
-
+  width: 435px;
+  height: 425px;
   background-color: #fff0d3;
-
-  margin: 35px auto 0;
-
-  padding: 15px 10px;
-
+  margin: 1px auto 0;
+  padding: 70px 15px;
   text-align: center;
-
   color: #bd4b70;
 }
 
 .hasil h3 {
-  font-size: 16px;
-
-  line-height: 17px;
-
-  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 19px;
+  margin-bottom: 55px;
 }
 
 #hasilTanggal {
-  font-size: 16px;
-
+  font-size: 28px;
   font-weight: bold;
-
   color: #ff4b9b;
-
-  margin-bottom: 25px;
+  margin-bottom: 65px;
 }
 
 .kemungkinan {
-  font-size: 16px;
-
+  font-size: 25px;
   font-weight: bold;
-
-  line-height: 17px;
+  line-height: 21px;
 }
 
 /* =====================================
@@ -277,11 +263,11 @@ body {
 
   color: #fff0d3;
 
-  font-size: 50px;
+  font-size: 80px;
 
   font-weight: bold;
 
-  line-height: 48px;
+  line-height: 68px;
 }
 
 /* =====================================
@@ -305,7 +291,7 @@ body {
 
   object-fit: cover;
 
-  object-position: center;
+  object-position: 100% center;
 
   display: block;
 }
