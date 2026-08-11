@@ -58,11 +58,13 @@ body {
 /* LOGO */
 
 .logo {
-  font-size: 14px;
+  font-size: 24px;
 
   font-weight: bold;
 
   position: relative;
+
+  margin-left: 60px;
 
   z-index: 2;
 }
@@ -74,13 +76,13 @@ body {
 
   z-index: 2;
 
-  margin-top: 30px;
+  margin-top: 70px;
 
-  margin-left: -10px;
+  margin-left: 50px;
 }
 
 .content h1 {
-  font-size: 58px;
+  font-size: 95px;
 
   line-height: 0.95;
 
@@ -92,15 +94,15 @@ body {
 /* BUTTON */
 
 .buttons {
-  margin-top: 30px;
+  margin-top: 50px;
 
-  margin-left: 105px;
+  margin-left: 160px;
 
   display: flex;
 
   flex-direction: column;
 
-  gap: 15px;
+  gap: 20px;
 
   width: 100px;
 }
@@ -150,7 +152,7 @@ body {
 
   object-fit: cover;
 
-  object-position: center;
+  object-position: 70% center;
 
   display: block;
 }
@@ -245,6 +247,97 @@ body {
   font-weight: bold;
 
   cursor: pointer;
+}
+
+/* ============================= */
+/* POPUP SIGN IN */
+/* ============================= */
+
+.signup-modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.45);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 11;
+}
+
+.signup-box {
+  width: 350px;
+
+  background-color: white;
+
+  padding: 35px;
+
+  border-radius: 15px;
+
+  position: relative;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.signup-box h2 {
+  color: #c34f75;
+
+  margin-bottom: 8px;
+}
+
+.signup-box p {
+  color: #777;
+
+  margin-bottom: 25px;
+}
+
+.signup-box input {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.signup-box input:focus {
+  border-color: #c34f75;
+}
+
+.signup-box button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background-color: #c34f75;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.signup-box button:hover {
+  background-color: #a83f62;
 }
 
 /* CLOSE */
