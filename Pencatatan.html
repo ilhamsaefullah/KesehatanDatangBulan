@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pencatatan Menstruasi</title>
+
+    <link rel="stylesheet" href="Pencatatan.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <button class="back-btn" onclick="kembali()">Back</button>
+
+      <h1>Pencatatan Menstruasi</h1>
+    </header>
+
+    <!-- FORM PENCATATAN -->
+    <main>
+      <h2>CATAT MENSTRUASI</h2>
+
+      <div class="form-container">
+        <!-- TANGGAL MULAI -->
+        <div class="tanggal-box">
+          <label for="tanggalMulai">Tanggal Mulai</label>
+
+          <input type="date" id="tanggalMulai" />
+        </div>
+
+        <!-- TANGGAL SELESAI -->
+        <div class="tanggal-box">
+          <label for="tanggalSelesai">Tanggal Selesai</label>
+
+          <input type="date" id="tanggalSelesai" />
+        </div>
+      </div>
+
+      <!-- DURASI -->
+      <div class="durasi">
+        Lama Menstruasi = <span id="lamaMenstruasi">-</span>
+      </div>
+
+      <!-- BUTTON -->
+      <button class="simpan-btn" onclick="simpanCatatan()">
+        SIMPAN CATATAN
+      </button>
+    </main>
+
+    <!-- RIWAYAT -->
+    <section class="riwayat">
+      <h2>Riwayat Menstruasi</h2>
+
+      <div class="riwayat-header">
+        <div>
+          <h3>Tanggal Mulai</h3>
+        </div>
+
+        <div>
+          <h3>Tanggal Selesai</h3>
+        </div>
+
+        <div>
+          <h3>Durasi Menstruasi</h3>
+        </div>
+      </div>
+
+      <!-- DATA RIWAYAT AKAN MUNCUL DI SINI -->
+      <div id="daftarRiwayat"></div>
+    </section>
+
+    <script src="Pencatatan.js"></script>
+  </body>
+</html>
