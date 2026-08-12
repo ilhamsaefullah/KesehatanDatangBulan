@@ -154,3 +154,21 @@ function hapusSemuaCatatan() {
     alert("Semua catatan berhasil dihapus!");
   }
 }
+
+// ===============================
+// HAPUS SEMUA CATATAN
+// ===============================
+
+function hapusSemuaCatatan() {
+  const konfirmasi = confirm("Yakin ingin menghapus semua catatan menstruasi?");
+
+  if (!konfirmasi) {
+    return;
+  }
+
+  localStorage.removeItem("riwayatMenstruasi");
+
+  tampilkanRiwayat();
+
+  alert("Semua catatan berhasil dihapus!");
+}
