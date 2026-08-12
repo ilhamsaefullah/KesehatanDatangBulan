@@ -143,3 +143,14 @@ function kembali() {
 
 // Jalankan ketika halaman dibuka
 tampilkanRiwayat();
+
+//Penghapus catatan//
+function hapusSemuaCatatan() {
+  if (confirm("Yakin ingin menghapus semua catatan menstruasi?")) {
+    localStorage.removeItem("riwayatMenstruasi");
+
+    tampilkanRiwayat();
+
+    alert("Semua catatan berhasil dihapus!");
+  }
+}
