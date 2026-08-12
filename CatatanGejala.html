@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catatan Gejala Menstruasi</title>
+    <link rel="stylesheet" href="CatatanGejala.css" />
+  </head>
+  <body>
+    <header class="header">
+      <button class="btn-back">Back</button>
+      <h1 class="header-title">Catatan Gejala Menstruasi</h1>
+    </header>
+
+    <main class="main-content">
+      <div class="left-column">
+        <!-- Input Tanggal -->
+        <div class="card card-tanggal">
+          <div class="card-title">Tanggal</div>
+          <input type="date" id="inputTanggal" class="date-input" />
+        </div>
+
+        <!-- Tingkat Nyeri -->
+        <div class="card card-nyeri">
+          <div class="card-title">TINGKAT NYERI</div>
+          <div class="checkbox-group">
+            <label class="checkbox-item color-ringan">
+              <input type="radio" name="tingkatNyeri" value="RINGAN" /> RINGAN
+            </label>
+            <label class="checkbox-item color-sedang">
+              <input type="radio" name="tingkatNyeri" value="SEDANG" /> SEDANG
+            </label>
+            <label class="checkbox-item color-berat">
+              <input type="radio" name="tingkatNyeri" value="BERAT" /> BERAT
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gejala yang Dirasa -->
+      <div class="card card-gejala">
+        <div class="card-title">GEJALA YANG DIRASA</div>
+        <div class="checkbox-group">
+          <label class="checkbox-item"
+            ><input type="checkbox" class="gejala-check" value="Nyeri Perut" />
+            Nyeri Perut</label
+          >
+          <label class="checkbox-item"
+            ><input type="checkbox" class="gejala-check" value="Sakit Kepala" />
+            Sakit Kepala</label
+          >
+          <label class="checkbox-item"
+            ><input
+              type="checkbox"
+              class="gejala-check"
+              value="Pegal / Nyeri Pinggul"
+            />
+            Pegal / Nyeri Pinggul</label
+          >
+          <label class="checkbox-item"
+            ><input type="checkbox" class="gejala-check" value="Mual" />
+            Mual</label
+          >
+          <label class="checkbox-item"
+            ><input type="checkbox" class="gejala-check" value="Mudah Lelah" />
+            Mudah Lelah</label
+          >
+          <label class="checkbox-item"
+            ><input type="checkbox" class="gejala-check" value="Mood Swing" />
+            Mood Swing</label
+          >
+          <label class="checkbox-item"
+            ><input type="checkbox" class="gejala-check" value="Kram Perut" />
+            Kram Perut</label
+          >
+        </div>
+        <button id="btnSimpan" class="btn-simpan">Simpan Catatan</button>
+      </div>
+
+      <!-- Riwayat Gejala -->
+      <div class="card card-riwayat">
+        <div class="card-title">RIWAYAT GEJALA</div>
+        <div id="containerRiwayat" class="riwayat-list">
+          <!-- Hasil pengisian data akan tampil di sini -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-images">
+        <img src="GambarCatatan1.JPG" alt="Gejala 1" class="img-thumb" />
+        <img src="GambarCatatan2.JPG" alt="Gejala 2" class="img-thumb" />
+        <img src="GambarCatatan3.JPG" alt="Gejala 3" class="img-thumb" />
+      </div>
+      <div class="brand-text">MENSTRUAL<br /><span>Care</span></div>
+    </footer>
+
+    <script src="CatatanGejala.js"></script>
+  </body>
+</html>
