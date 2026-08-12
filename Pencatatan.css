@@ -7,88 +7,118 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 
-  background-color: #ffa6aa;
+  background-color: #ffa3ad;
 
-  color: #fff4d6;
+  min-height: 100vh;
 
+  color: #fff;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 100%;
   min-height: 100vh;
 }
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
-.header {
-  height: 35px;
+header {
+  height: 70px;
 
   background-color: #c34f75;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   position: relative;
-
-  padding: 0 40px;
 }
 
-.header h1 {
+header h1 {
+  font-size: 30px;
+
+  color: #fff1d6;
+
+  font-weight: bold;
+}
+
+/* =========================
+   BUTTON BACK
+========================= */
+
+.btn-back {
   position: absolute;
 
-  right: 40px;
+  left: 30px;
 
-  font-size: 25px;
+  top: 18px;
 
-  color: #fff4d6;
-}
+  width: 100px;
+  height: 35px;
 
-/* ================= BACK BUTTON ================= */
+  border: none;
 
-.back-btn {
-  width: 97px;
-  height: 25px;
+  border-radius: 8px;
 
-  border: 1px solid #555;
+  background-color: #ffb1b6;
 
-  border-radius: 6px;
+  color: #7e294d;
 
-  background-color: #ffb5b5;
+  font-size: 15px;
 
-  color: #000;
-
-  font-size: 13px;
+  font-weight: bold;
 
   cursor: pointer;
 }
 
-.back-btn:hover {
-  background-color: #ffd0d0;
+.btn-back:hover {
+  background-color: #fff1d6;
 }
 
-/* ================= JUDUL ================= */
+/* =========================
+   MAIN
+========================= */
 
 main {
+  width: 90%;
+
+  max-width: 1000px;
+
+  margin: 40px auto;
+
   text-align: center;
-  padding-top: 40px;
-  min-height: 330px;
 }
 
-main h2 {
-  font-size: 30px;
+main > h2 {
+  font-size: 32px;
 
-  margin-bottom: 24px;
+  color: #fff1d6;
 
-  color: #fff4d6;
+  margin-bottom: 35px;
 }
 
-/* ================= FORM ================= */
+/* =========================
+   FORM TANGGAL
+========================= */
 
-.form-container {
+.form-tanggal {
   display: flex;
 
   justify-content: center;
 
-  gap: 65px;
+  gap: 60px;
+
+  margin-bottom: 25px;
 }
 
 .tanggal-box {
+  width: 380px;
+
   display: flex;
 
   flex-direction: column;
@@ -97,217 +127,261 @@ main h2 {
 }
 
 .tanggal-box label {
-  font-size: 45px;
+  font-size: 24px;
 
   font-weight: bold;
 
-  margin-bottom: 6px;
+  color: #fff1d6;
 
-  color: #fff4d6;
+  margin-bottom: 12px;
 }
 
-/* INPUT DATE */
-
 .tanggal-box input {
-  width: 320px;
+  width: 100%;
 
-  height: 90px;
+  height: 70px;
+
+  padding: 0 20px;
 
   border: none;
 
-  background-color: #fff0d3;
+  background-color: #fff1d6;
 
-  color: #bd4b70;
+  color: #c34f75;
 
-  font-size: 35px;
+  font-size: 22px;
 
   font-weight: bold;
 
-  padding: 5px 10px;
+  border-radius: 4px;
 
   outline: none;
+
+  cursor: pointer;
 }
 
-/* ================= DURASI ================= */
+.tanggal-box input:focus {
+  box-shadow: 0 0 0 3px #c34f75;
+}
 
-.durasi {
-  width: 550px;
+/* =========================
+   DURASI
+========================= */
 
-  height: 55px;
+.durasi-box {
+  width: 820px;
 
-  margin: 0 auto;
+  max-width: 100%;
 
-  background-color: #fff0d3;
+  min-height: 75px;
 
-  color: #bd4b70;
+  margin: 0 auto 25px;
 
-  font-size: 35px;
+  background-color: #fff1d6;
 
-  font-weight: bold;
+  color: #c34f75;
 
   display: flex;
 
   align-items: center;
 
   justify-content: center;
+
+  gap: 8px;
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  border-radius: 4px;
 }
 
-#lamaMenstruasi {
-  margin-left: 5px;
+.durasi-box strong {
+  font-size: 27px;
 }
 
-/* ================= Botton ========== */
+/* =========================
+   BUTTON SIMPAN
+========================= */
 
-.simpan-btn {
-  margin-top: 12px;
+.btn-simpan {
+  padding: 14px 30px;
 
-  width: 132px;
+  background-color: #c34f75;
 
-  height: 37px;
+  color: #fff1d6;
 
   border: none;
 
-  border-radius: 6px;
+  border-radius: 8px;
 
-  background-color: #bd4b70;
-
-  color: #fff4d6;
-
-  font-size: 12px;
+  font-size: 16px;
 
   font-weight: bold;
 
   cursor: pointer;
+
+  margin-bottom: 45px;
 }
 
-.simpan-btn:hover {
-  background-color: #a83f62;
+.btn-simpan:hover {
+  background-color: #a83e61;
 }
 
-.hapus-btn {
-  margin-top: 12px;
-
-  width: 132px;
-
-  height: 37px;
-
-  border: none;
-
-  border-radius: 6px;
-
-  background-color: #bd4b70;
-
-  color: #fff4d6;
-
-  font-size: 12px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-}
-
-.hapus-btn:hover {
-  background-color: #a83f62;
-}
-
-/* ================= RIWAYAT ================= */
+/* =========================
+   RIWAYAT
+========================= */
 
 .riwayat {
-  background-color: #bd4b70;
+  width: 100%;
 
-  min-height: 190px;
+  background-color: #c34f75;
 
-  padding-top: 0;
+  padding: 25px 30px 30px;
 
-  margin-top: 83px;
+  border-radius: 10px;
 }
 
 .riwayat h2 {
-  text-align: center;
+  font-size: 28px;
 
-  font-size: 20px;
+  color: #fff1d6;
 
-  padding: 0 0 8px;
-
-  color: #fff4d6;
+  margin-bottom: 20px;
 }
 
-/* ================= HEADER RIWAYAT ================= */
+/* =========================
+   HEADER TABEL
+========================= */
 
-.riwayat-header {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr;
-
-  text-align: center;
-}
-
-.riwayat-header h3 {
-  font-size: 18px;
-
-  color: #fff4d6;
-}
-
-/* ================= DATA RIWAYAT ================= */
-
+.riwayat-header,
 .riwayat-data {
   display: grid;
 
   grid-template-columns: 1fr 1fr 1fr;
 
-  text-align: center;
+  align-items: center;
 
-  margin-top: 5px;
+  text-align: center;
 }
 
-.riwayat-data p {
-  font-size: 18px;
+.riwayat-header {
+  min-height: 55px;
+
+  background-color: #fff1d6;
+
+  color: #c34f75;
+
+  font-size: 19px;
 
   font-weight: bold;
 
-  color: #fff4d6;
-
-  line-height: 24px;
+  border-radius: 5px 5px 0 0;
 }
 
-/* ================= RESPONSIVE HP ================= */
+.riwayat-data {
+  min-height: 55px;
+
+  background-color: #ffb1b6;
+
+  color: #fff1d6;
+
+  font-size: 19px;
+
+  font-weight: bold;
+
+  border-top: 2px solid #c34f75;
+}
+
+.riwayat-data p {
+  margin: 0;
+}
+
+/* =========================
+   HAPUS
+========================= */
+
+.btn-hapus {
+  margin-top: 20px;
+
+  padding: 11px 22px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background-color: #fff1d6;
+
+  color: #c34f75;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.btn-hapus:hover {
+  background-color: #ffd7d7;
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
 
 @media (max-width: 768px) {
-  .header {
-    padding: 0 15px;
+  header {
+    height: 100px;
   }
 
-  .header h1 {
-    right: 15px;
+  header h1 {
+    font-size: 24px;
+  }
+
+  .btn-back {
+    left: 15px;
+
+    top: 10px;
+  }
+
+  main {
+    width: 92%;
+
+    margin-top: 30px;
+  }
+
+  .form-tanggal {
+    flex-direction: column;
+
+    gap: 25px;
+
+    align-items: center;
+  }
+
+  .tanggal-box {
+    width: 100%;
+  }
+
+  .tanggal-box label {
+    font-size: 21px;
+  }
+
+  .tanggal-box input {
+    height: 60px;
 
     font-size: 18px;
   }
 
-  main h2 {
-    font-size: 25px;
-  }
+  .durasi-box {
+    font-size: 20px;
 
-  .form-container {
-    flex-direction: column;
-
-    gap: 15px;
-  }
-
-  .durasi {
-    width: 90%;
-
-    margin-top: 15px;
+    min-height: 65px;
   }
 
   .riwayat {
-    margin-top: 20px;
+    padding: 15px;
   }
 
-  .riwayat-header h3 {
-    font-size: 14px;
-  }
-
-  .riwayat-data p {
+  .riwayat-header,
+  .riwayat-data {
     font-size: 14px;
   }
 }
