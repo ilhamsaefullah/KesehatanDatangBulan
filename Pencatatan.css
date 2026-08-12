@@ -156,7 +156,7 @@ main h2 {
   margin-left: 5px;
 }
 
-/* ================= SIMPAN ================= */
+/* ================= Botton ========== */
 
 .simpan-btn {
   margin-top: 12px;
@@ -181,6 +181,32 @@ main h2 {
 }
 
 .simpan-btn:hover {
+  background-color: #a83f62;
+}
+
+.hapus-btn {
+  margin-top: 12px;
+
+  width: 132px;
+
+  height: 37px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background-color: #bd4b70;
+
+  color: #fff4d6;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.hapus-btn:hover {
   background-color: #a83f62;
 }
 
