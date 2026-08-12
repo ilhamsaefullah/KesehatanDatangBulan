@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #bd4860; /* Warna dasar maroon/pink tua */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Container (Kolom Kiri & Kanan) */
+.main-container {
+  display: flex;
+  flex: 1;
+  padding: 40px 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* Kolom Kiri */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.brand-logo {
+  color: #ff68a8;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 0.85;
+  font-style: italic;
+}
+
+.brand-logo span {
+  font-size: 48px;
+  font-family: "Brush Script MT", cursive, sans-serif;
+}
+
+.photo-wrapper {
+  width: 280px;
+  height: 250px;
+  /* Efek ripped paper/pinggiran tidak beraturan */
+  clip-path: polygon(
+    0% 5%,
+    5% 0%,
+    95% 2%,
+    100% 8%,
+    98% 92%,
+    93% 100%,
+    8% 97%,
+    0% 90%
+  );
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Kolom Kanan */
+.right-section {
+  flex: 1;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.sub-header {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.main-title {
+  color: #ff68a8;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: bold;
+  text-align: justify;
+}
+
+/* Footer Banner */
+.footer-banner {
+  background-color: #f1a3a8;
+  color: #ffffff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  padding: 15px 10px;
+  letter-spacing: 2px;
+}
+
+/* Responsive Support */
+@media (max-width: 850px) {
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .left-section {
+    align-items: center;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .footer-banner {
+    font-size: 24px;
+  }
+}
