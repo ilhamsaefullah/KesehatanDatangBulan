@@ -9,68 +9,68 @@
   </head>
 
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <button class="back-btn" onclick="kembali()">Back</button>
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <button class="btn-back" onclick="kembali()">Back</button>
+        <h1>Pencatatan Menstruasi</h1>
+      </header>
 
-      <h1>Pencatatan Menstruasi</h1>
-    </header>
+      <!-- FORM PENCATATAN -->
+      <main>
+        <h2>CATAT MENSTRUASI</h2>
 
-    <!-- FORM PENCATATAN -->
-    <main>
-      <h2>CATAT MENSTRUASI</h2>
+        <div class="form-tanggal">
+          <!-- TANGGAL MULAI -->
+          <div class="tanggal-box">
+            <label for="tanggalMulai"> Tanggal Mulai </label>
 
-      <div class="form-container">
-        <!-- TANGGAL MULAI -->
-        <div class="tanggal-box">
-          <label for="tanggalMulai">Tanggal Mulai</label>
+            <input type="date" id="tanggalMulai" />
+          </div>
 
-          <input type="date" id="tanggalMulai" />
+          <!-- TANGGAL SELESAI -->
+          <div class="tanggal-box">
+            <label for="tanggalSelesai"> Tanggal Selesai </label>
+
+            <input type="date" id="tanggalSelesai" />
+          </div>
         </div>
 
-        <!-- TANGGAL SELESAI -->
-        <div class="tanggal-box">
-          <label for="tanggalSelesai">Tanggal Selesai</label>
+        <!-- HASIL DURASI -->
+        <div class="durasi-box">
+          <span> Lama Menstruasi = </span>
 
-          <input type="date" id="tanggalSelesai" />
-        </div>
-      </div>
+          <strong id="lamaMenstruasi"> - </strong>
 
-      <!-- DURASI -->
-      <div class="durasi">
-        Lama Menstruasi = <span id="lamaMenstruasi">-</span>
-      </div>
-
-      <!-- BUTTON -->
-      <button class="simpan-btn" onclick="simpanCatatan()">
-        SIMPAN CATATAN
-      </button>
-      <button class="hapus-btn" onclick="hapusSemuaCatatan()">
-        Hapus Semua Catatan
-      </button>
-    </main>
-
-    <!-- RIWAYAT -->
-    <section class="riwayat">
-      <h2>Riwayat Menstruasi</h2>
-
-      <div class="riwayat-header">
-        <div>
-          <h3>Tanggal Mulai</h3>
+          <span> Hari </span>
         </div>
 
-        <div>
-          <h3>Tanggal Selesai</h3>
-        </div>
+        <!-- TOMBOL SIMPAN -->
+        <button class="btn-simpan" onclick="simpanCatatan()">
+          SIMPAN CATATAN
+        </button>
 
-        <div>
-          <h3>Durasi Menstruasi</h3>
-        </div>
-      </div>
+        <!-- RIWAYAT -->
+        <section class="riwayat">
+          <h2>RIWAYAT MENSTRUASI</h2>
 
-      <!-- DATA RIWAYAT AKAN MUNCUL DI SINI -->
-      <div id="daftarRiwayat"></div>
-    </section>
+          <!-- HEADER TABEL -->
+          <div class="riwayat-header">
+            <div>Tanggal Mulai</div>
+            <div>Tanggal Selesai</div>
+            <div>Lama Menstruasi</div>
+          </div>
+
+          <!-- DATA AKAN DIISI JAVASCRIPT -->
+          <div id="daftarRiwayat"></div>
+        </section>
+
+        <!-- HAPUS SEMUA -->
+        <button class="btn-hapus" onclick="hapusSemuaCatatan()">
+          HAPUS SEMUA CATATAN
+        </button>
+      </main>
+    </div>
 
     <script src="Pencatatan.js"></script>
   </body>
