@@ -2,13 +2,92 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=Kesehatan.html" />
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Menstrual Care</title>
+
+    <!-- Hubungkan CSS -->
+    <link rel="stylesheet" href="Datang.css" />
   </head>
+
   <body>
-    <p>
-      Jika tidak diarahkan secara otomatis,
-      <a href="Kesehatan.html">klik di sini</a>.
-    </p>
+    <div class="container">
+      <!-- BAGIAN KIRI -->
+      <div class="left-section">
+        <div class="logo">✥ HEALTH NUMBER ONE</div>
+
+        <div class="content">
+          <h1>
+            safe<br />
+            comfortable<br />
+            good mood
+          </h1>
+
+          <div class="buttons">
+            <button id="loginBtn">LOGIN NOW</button>
+
+            <button id="signupBtn">SIGN IN NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BAGIAN KANAN -->
+      <div class="right-section">
+        <img
+          src="C:\Users\ilham\Documents\GitHub\KesehatanDatangBulan\FotoLogin.jpg"
+          alt="Woman"
+        />
+      </div>
+    </div>
+
+    <!-- POPUP LOGIN -->
+    <div class="login-modal" id="loginModal">
+      <div class="login-box">
+        <span class="close" id="closeLogin"> &times; </span>
+
+        <h2>Welcome Back</h2>
+
+        <p>Login to your account</p>
+
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Email" required />
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">LOGIN</button>
+        </form>
+      </div>
+    </div>
+    <!-- POPUP SIGN IN -->
+    <div class="signup-modal" id="signupModal">
+      <div class="signup-box">
+        <span class="close" id="closeSignup"> &times; </span>
+
+        <h2>Sign In</h2>
+
+        <p>Sign In Your Account</p>
+
+        <form id="signupForm">
+          <input type="email" id="signupEmail" placeholder="Email" required />
+
+          <input
+            type="password"
+            id="signupPassword"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">SIGN IN</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Hubungkan JavaScript -->
+    <script src="Bulan.js"></script>
   </body>
 </html>
