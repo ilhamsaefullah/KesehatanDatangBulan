@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f1a3a8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #bd4860;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.btn-back {
+  background-color: #fca8a3;
+  border: 1px solid #777;
+  padding: 6px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-title {
+  color: #ffffff;
+  margin-left: auto;
+  font-size: 24px;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  flex: 1;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 220px;
+}
+
+.card {
+  background-color: #fff2d3;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-gejala {
+  width: 280px;
+  align-items: flex-start;
+}
+
+.card-riwayat {
+  flex: 1;
+  align-items: stretch;
+}
+
+/* Titles */
+.card-title {
+  background-color: #ff68a8;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Input Styles */
+.date-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e190a2;
+  border-radius: 5px;
+  background-color: #ffd8df;
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #e34c8d;
+}
+
+/* Specific Colors for Nyeri */
+.color-ringan {
+  color: #8cb829;
+}
+.color-sedang {
+  color: #d19e00;
+}
+.color-berat {
+  color: #d90000;
+}
+
+.btn-simpan {
+  margin-top: 15px;
+  width: 100%;
+  padding: 8px;
+  background-color: #ff68a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Output Riwayat */
+.riwayat-list {
+  overflow-y: auto;
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.riwayat-item {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid #ff68a8;
+  font-size: 13px;
+  color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: #bd4860;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.footer-images {
+  display: flex;
+  gap: 15px;
+}
+
+.img-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.brand-text {
+  color: #ff68a8;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: right;
+  line-height: 0.9;
+  font-style: italic;
+}
+
+.brand-text span {
+  font-size: 38px;
+  font-family: "Brush Script MT", cursive, sans-serif;
+}
