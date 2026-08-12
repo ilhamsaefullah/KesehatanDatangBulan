@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #ffc0cb; /* Warna background merah muda lembut */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #b5495b; /* Warna merah maroon header */
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.btn-back {
+  background-color: #fca8a3;
+  color: #000;
+  border: 1px solid #888;
+  padding: 6px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #f88e88;
+}
+
+.header-title {
+  color: #ffffff;
+  margin-left: auto;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Layout utama (2 Kolom: Kiri grid makanan, Kanan gambar model) */
+.main-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+/* Grid Kiri - Kartu Makanan */
+.food-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 30px;
+  align-content: center;
+  justify-items: center;
+}
+
+/* Individual Card */
+.food-card {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+}
+
+.food-img-wrapper {
+  width: 100%;
+  height: 160px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.food-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-label {
+  background-color: #b5495b;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 5px;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Sisi Kanan - Gambar Model */
+.hero-image-section {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+  }
+
+  .hero-image-section {
+    height: 300px;
+  }
+}
