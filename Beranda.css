@@ -19,6 +19,7 @@ body {
 .beranda {
   width: 100%;
   height: 100vh;
+  min-height: 100vh;
 
   display: flex;
 
@@ -33,7 +34,7 @@ body {
   width: 67%;
   height: 100%;
 
-  background-image: url ("BackgroundBeranda.jpg");
+  background-image: url("BackgroundBeranda.jpg");
   background-size: cover;
   background-position: center;
 
