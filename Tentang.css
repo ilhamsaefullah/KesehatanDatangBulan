@@ -62,7 +62,7 @@ body {
 
 /* Styling Foto */
 .profile-photo {
-  width: 180px; /* Sesuaikan ukuran foto Kamu */
+  width: 250px; /* Sesuaikan ukuran foto Kamu */
   border-radius: 20px;
   margin-top: 10px; /* Memberi ruang di atas foto agar tidak tertutup total oleh logo */
 }
