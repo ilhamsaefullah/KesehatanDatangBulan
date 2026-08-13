@@ -46,3 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gejalaCheckboxes.forEach((cb) => (cb.checked = false));
   });
 });
+
+//Button Back//
+function kembali() {
+  window.location.href = "Beranda.html";
+}
