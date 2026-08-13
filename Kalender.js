@@ -248,6 +248,13 @@ function tampilkanDataMenstruasi() {
     formatTanggalKalender(tanggalPrediksi);
 }
 
+//Button Back//
+const btnBack = document.getElementById("btnBack");
+btnBack.addEventListener("click", () => {
+  // Kembali ke halaman sebelumnya
+  window.history.back();
+});
+
 // =====================================
 // BULAN SEBELUMNYA
 // =====================================
@@ -278,11 +285,6 @@ function bulanBerikutnya() {
   }
 
   tampilkanKalender();
-}
-
-//Button Back//
-function kembali() {
-  window.location.href = "Beranda.html";
 }
 
 // =====================================
