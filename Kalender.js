@@ -280,6 +280,11 @@ function bulanBerikutnya() {
   tampilkanKalender();
 }
 
+//Button Back//
+function kembali() {
+  window.location.href = "Beranda.html";
+}
+
 // =====================================
 // JALANKAN
 // =====================================
