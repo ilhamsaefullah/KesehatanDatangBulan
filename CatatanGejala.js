@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputTanggal = document.getElementById("inputTanggal");
   const containerRiwayat = document.getElementById("containerRiwayat");
 
+  // 1. Ambil elemen tombol Back
+  const btnBack = document.getElementById("btnBack");
+
+  // 2. Tambahkan event listener untuk navigasi kembali ke Beranda
+  if (btnBack) {
+    btnBack.addEventListener("click", () => {
+      window.location.href = "Beranda.html";
+    });
+  }
+
+  // Event listener tombol simpan yang sudah Kamu buat
   btnSimpan.addEventListener("click", () => {
     const tanggal = inputTanggal.value;
 
@@ -46,8 +57,3 @@ document.addEventListener("DOMContentLoaded", () => {
     gejalaCheckboxes.forEach((cb) => (cb.checked = false));
   });
 });
-
-//Button Back//
-function kembali() {
-  window.location.href = "Beranda.html";
-}
