@@ -110,7 +110,7 @@ body {
   color: #e34c8d;
 }
 
-/* Specific Colors for Nyeri */
+/* Color Nyeri */
 .color-ringan {
   color: #8cb829;
 }
@@ -151,37 +151,67 @@ body {
   color: #333;
 }
 
-/* Footer */
+/* =====================================
+   FOOTER (Diperbaiki)
+===================================== */
 .footer {
   background-color: #bd4860;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 30px;
+  margin-top: auto;
 }
 
+/* Container 3 Foto di Kiri */
 .footer-images {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .img-thumb {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
-.brand-text {
-  color: #ff68a8;
-  font-size: 32px;
-  font-weight: 900;
-  text-align: right;
-  line-height: 0.9;
-  font-style: italic;
+/* Container Logo di Kanan */
+.footer-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.brand-text span {
-  font-size: 38px;
-  font-family: "Brush Script MT", cursive, sans-serif;
+.footer-logo img {
+  width: 280px; /* Ukuran ideal logo agar muat pas di kanan */
+  height: auto;
+  display: block;
+}
+
+/* Responsive HP */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .card-gejala {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .img-thumb {
+    width: 75px;
+    height: 75px;
+  }
+
+  .footer-logo img {
+    width: 200px;
+  }
 }
