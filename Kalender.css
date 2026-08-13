@@ -168,7 +168,7 @@ body {
 /* MENSTRUASI */
 .hari .menstruasi {
   background-color: #ff4b5c;
-  color: white;
+  color: white;`
   font-weight: bold;
 }
 
@@ -322,6 +322,35 @@ body {
   color: #bd4b70;
 
   font-weight: bold;
+}
+
+  .btn-back {
+  position: absolute;
+
+  left: 30px;
+
+  top: 18px;
+
+  width: 100px;
+  height: 35px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: #ffb1b6;
+
+  color: #7e294d;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  background-color: #fff1d6;
 }
 
 /* ==============================
