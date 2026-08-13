@@ -166,12 +166,12 @@ body {
 /* Container 3 Foto di Kiri */
 .footer-images {
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
 
 .img-thumb {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -184,7 +184,7 @@ body {
 }
 
 .footer-logo img {
-  width: 280px; /* Ukuran ideal logo agar muat pas di kanan */
+  width: 300px; /* Ukuran ideal logo agar muat pas di kanan */
   height: auto;
   display: block;
 }
