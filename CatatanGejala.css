@@ -184,8 +184,9 @@ body {
 }
 
 .footer-logo img {
-  width: 300px; /* Ukuran ideal logo agar muat pas di kanan */
+  width: 400px; /* Ukuran ideal logo agar muat pas di kanan */
   height: auto;
+  left: 100;
   display: block;
 }
 
