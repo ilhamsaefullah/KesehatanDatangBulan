@@ -108,12 +108,14 @@ body {
   flex: 1;
   display: flex;
   align-items: stretch;
+  overflow: hidden; /* Mencegah gambar bocor/keluar batas saat digeser */
 }
 
 .hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 85% center; /* Ubah angka 85% untuk geser kanan/kiri sesuka hati */
   display: block;
 }
 
