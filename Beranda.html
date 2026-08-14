@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Menstrual Care</title>
-
     <link rel="stylesheet" href="Beranda.css" />
   </head>
 
   <body>
+    <!-- ELEMEN AUDIO BACKSOUND (Masukkan nama file musikmu di sini) -->
+    <audio id="bgMusic" loop>
+      <source src="AudioWebsite.mp3" type="audio/mpeg" />
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+
     <div class="beranda">
       <!-- BAGIAN KIRI -->
       <div class="left-content">
@@ -21,6 +25,7 @@
           </h1>
         </div>
       </div>
+
       <!-- BAGIAN KANAN -->
       <div class="right-content">
         <!-- MENU -->
@@ -58,6 +63,11 @@
         </div>
       </div>
     </div>
+
+    <!-- TOMBOL MUTE / PLAY MUSIK -->
+    <button id="musicToggleBtn" class="music-toggle-btn">🔊 Musik: ON</button>
+
+    <!-- SCRIPT JAVASCRIPT (Harus memanggil file .js, bukan .mp3) -->
     <script src="Beranda.js"></script>
   </body>
 </html>
