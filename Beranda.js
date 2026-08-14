@@ -1,11 +1,35 @@
-// Mengambil semua tombol menu
-const menuButtons = document.querySelectorAll(".menu button");
+document.addEventListener("DOMContentLoaded", () => {
+  const bgMusic = document.getElementById("bgMusic");
+  const musicBtn = document.getElementById("musicToggleBtn");
 
-// Memberikan fungsi klik pada setiap tombol
-menuButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    const menu = button.innerText;
+  // Atur volume lagu (0.0 sampai 1.0) -> 0.3 artinya volume 30% agar lembut
+  bgMusic.volume = 0.3;
 
-    alert("Kamu memilih: " + menu);
-  });
+  // Coba putar musik secara otomatis saat pertama masuk
+  let playPromise = bgMusic.play();
+
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Jika browser memblokir autoplay, musik diputar saat pengguna pertama kali mengklik layar
+      const startMusicOnInteraction = () => {
+        bgMusic.play();
+        document.removeEventListener("click", startMusicOnInteraction);
+      };
+      document.addEventListener("click", startMusicOnInteraction);
+    });
+  }
+
+  // Buka/Mati musik manual lewat tombol musik
+  if (musicBtn) {
+    musicBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // Agar tidak bentrok dengan event click dokumentasi
+      if (bgMusic.paused) {
+        bgMusic.play();
+        musicBtn.innerText = "🔊 Musik: ON";
+      } else {
+        bgMusic.pause();
+        musicBtn.innerText = "🔇 Musik: OFF";
+      }
+    });
+  }
 });
